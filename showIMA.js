@@ -14,17 +14,20 @@
 */
 
 
+//
+//  利用滚轮缩放图片
+//
+function zoomImg(e) {
+    var zoom = parseInt(e.style.zoom, 10) || 100;
+    zoom += event.wheelDelta / 20;
+    //限制缩放程度
+    if (zoom > 20 && zoom < 150) e.style.zoom = zoom + '%';
+    return false;
+}
+
+
 $(function () {
-    //
-    //  利用滚轮缩放图片
-    //
-    function zoomImg(e) {
-        var zoom = parseInt(e.style.zoom, 10) || 100;
-        zoom += event.wheelDelta / 20;
-        //限制缩放程度
-        if (zoom > 20 && zoom < 150) e.style.zoom = zoom + '%';
-        return false;
-    }
+
 
     //
     //  隐藏遮罩，关闭按钮和图片层，并移除图片
