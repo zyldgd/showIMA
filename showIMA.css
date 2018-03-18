@@ -1,0 +1,86 @@
+/*
+@anthor : 
+    zyl
+@dicription :
+    show image in cover-layer
+@usage :
+    <link  type="text/css" rel="stylesheet" href="showIMA.css"/>
+    <script type="text/javascript" src="showIMA.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <div class="IMA"><img src="a.png"/></div>
+    or
+    <div class="IMA gifplay"><img src="a.png"/></div>
+*/
+
+
+/*
+*  遮罩
+*/
+.IMAcover {
+    position: fixed;
+    z-index: 998;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0px;
+    left: 0px;
+}
+
+/*
+*  图片父节点
+*/
+.IMAlayer {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+*  关闭按钮
+*/
+.IMAclose {
+    z-index: 1000;
+    background-color: #61d304;
+    color: white;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    height: 40px;
+    width: 80px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/*
+*  显示后的图片
+*/
+.IMAlayer img {
+    box-shadow: black 0 0 7px 2px;
+}
+
+/*
+*  显示前的图片父节点
+*/
+.IMA {
+    text-align: center;
+    width: 400px;
+    margin: auto;
+}
+
+/*
+*  显示前的图片
+*/
+.IMA img {
+    width: 100%;
+    cursor: zoom-in;
+}
